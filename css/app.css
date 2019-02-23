@@ -1,0 +1,112 @@
+/*:root {*/
+    /*--hex-color-default: dimgray;*/
+/*}*/
+
+/*body {*/
+    /*background: black;*/
+    /*margin: 0;*/
+/*}*/
+
+
+
+/*body {*/
+    /*!*background: black;*!*/
+    /*margin: 0;*/
+/*}*/
+/*svg {*/
+    /*!*background: black;*!*/
+    /*min-height: 100vh;*/
+/*}*/
+/*polygon {*/
+    /*stroke-width: 0.5;*/
+    /*stroke: dimgray;*/
+    /*fill: transparent;*/
+    /*!*pointer-events: visible;*!*/
+/*}*/
+
+/*#hex:hover {*/
+    /*fill: red;*/
+    /*stroke: red;*/
+/*}*/
+body {
+    background: #212121;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    position: fixed;
+}
+
+.row {
+    display: flex;
+    /*flex-wrap: wrap;*/
+    /*flex-direction: column;*/
+    /*justify-content: space-between*/
+    /*height: 100px;*/
+    /*width: 300px;*/
+}
+
+.noteven {
+    margin: -37px 0 0 -70px;
+}
+
+.even {
+    margin: -36px 0 0 -10px;
+}
+
+/*.hexagon {*/
+    /*width: 100px;*/
+    /*height: 100px;*/
+    /*border: 3px solid;*/
+    /*border-color: red;*/
+    /*background-color: #000;*/
+/*}*/
+
+/*.hexagon:hover {*/
+    /*background-color: darkgray;*/
+/*}*/
+
+.hexagon {
+    position: relative;
+    width: 120px;
+    height: 69.28px;
+    background-color: #212121;
+    margin: 34.64px 0;
+    /*border-left: solid 1px #333333;*/
+    /*border-right: solid 1px #333333;*/
+}
+
+.hexagon:before,
+.hexagon:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 84.85px;
+    height: 84.85px;
+    -webkit-transform: scaleY(0.5774) rotate(-45deg);
+    -ms-transform: scaleY(0.5774) rotate(-45deg);
+    transform: scaleY(0.5774) rotate(-45deg);
+    background-color: inherit;
+    left: 16.5736px;
+}
+
+.hexagon:before {
+    top: -42.4264px;
+    /*border-top: solid 1.4142px #333333;*/
+    /*border-right: solid 1.4142px #333333;*/
+}
+
+.hexagon:after {
+    bottom: -42.4264px;
+    /*border-bottom: solid 1.4142px #333333;*/
+    /*border-left: solid 1.4142px #333333;*/
+}
+
+.hexagon:hover {
+    background: #323232;
+    filter: alpha(opacity=100);
+    opacity:1;
+    -moz-opacity:1;
+}
